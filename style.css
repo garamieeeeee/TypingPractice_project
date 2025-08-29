@@ -1,0 +1,224 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: rgb(181, 218, 218);
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgb(228, 207, 175);
+}
+
+.typing-area {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    min-width: 800px;
+    gap: 1rem;
+    background-color: beige;
+    padding: 1rem;
+}
+
+.side-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgb(169, 235, 213);
+    padding: 1rem;
+}
+
+.sentence-area{
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.sentenceBox{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 세로 중앙 */
+    background-color: #dbdbdb;
+    overflow: hidden; /* 넘치는 문장은 숨기기 */
+    position: relative;
+}
+
+.sentence {
+    background-color: rgb(190, 190, 190);
+    transition: transform 0.3s ease, opacity 0.3s ease;/* 부드럽게 이동 */
+}
+
+#prev {
+    height: 30px;
+    color: rgb(131, 131, 131);
+}
+
+#cur {
+    height: 30px;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    border: 1px solid black;
+}
+
+#next {
+    height: 30px;
+    color: rgb(131, 131, 131);
+}
+
+#userInput {
+    height: 40px;
+    background-color: rgb(221, 221, 221);
+}
+
+#info {
+    text-align: center;
+    background-color: rgb(215, 215, 190);
+    color: gray;
+    margin: 0 auto;
+    font-size: smaller;
+}
+
+#timer {
+    background-color:#a6b9e9;
+    border: 1px solid black;
+    text-align: center;
+    align-content: center;
+    font-size: 60px;
+    margin: 0 auto;
+    width: calc(100% - 1rem); /* 여백 확보 */
+    height: 100px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    min-width: 150px;
+    font-family: "Wallpoet", sans-serif;
+}
+
+#specBox {
+    background-color: rgb(182, 200, 220);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    min-width: 200px;
+}
+
+.spec {
+    display: flex;
+    justify-content: space-between; /* 양 끝 정렬 */
+    align-items: center;
+    height: 30px;
+    background-color: aqua;
+    border: 1px solid black;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+.barContainer {
+    flex: 1;
+    margin: 0 0.5rem;
+    width: 100px;
+    height: 10px;
+    background-color: rgb(199, 181, 181);
+    position: relative;
+}
+
+.bar {
+    position: absolute;
+    background-color: #745efe;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s ease-out;
+}
+
+#pauseButton {
+    width: 80%;
+    height: 80px;
+    background-color: rgb(219, 202, 180);
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#messageBox { 
+    display: flex; 
+    flex-direction: column; 
+    width: 80%; 
+    height: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#ccb399;
+    z-index: 999;
+    border: 1px solid black;
+    align-items: center;
+    text-align: center;
+    visibility: hidden;
+}
+
+#notice {
+    background-color: rgb(206, 161, 124);
+    text-align: center; 
+}
+
+#user_log {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    width: 80%; 
+    height: 40%;
+    background-color: rgb(237, 236, 141); 
+    display: none;
+}
+
+#buttonsBox { 
+    display: flex; 
+    width: 80%; 
+    height: 20%; 
+    margin-top: 10px; 
+    background-color: #b8957c; 
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 10px;
+}
+
+.threeButtons { 
+    height: 60%; 
+    width: 20%; 
+    background-color: #afafaf; 
+    margin: 10px; 
+}
+
+#pro {
+    background-color: #b1acd4;
+    min-width: 40px;
+    text-align: center;
+}
+
+#cor {
+    background-color: #b1acd4;
+    min-width: 40px;
+    text-align: center;
+}
+
+#vol {
+    background-color: #b1acd4;
+    min-width: 40px;
+    text-align: center;
+}

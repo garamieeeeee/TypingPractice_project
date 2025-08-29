@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>타자연습 프로그램-첫화면</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>타자연습 프로그램-첫 화면</h1>
+    <header>
+        <h1>Typing Practice</h1>
+    </header>
+
+    <div id="messageBox">
+        <p id="notice">NOTICE</p>
+        <p id="messageContent">Hi</p>
+        <div id="user_log">
+            <p>경과시간:</p>
+            <p>타자수:</p>
+            <p>정확도:</p>
+        </div>
+        <div id="buttonsBox">
+            <input type="button" value="계속하기" id="continueButton" class="threeButtons">
+            <input type="button" value="그만하기" id="quitButton" class="threeButtons">
+            <input type="button" value="처음부터" id="restartButton" class="threeButtons">
+        </div>
+    </div>
+
+    <main>
+        <aside class="side-panel">
+            <div id="timer">00:00</div>
+            <div id="specBox">
+                <div class="spec" id="progress">
+                    <p style="min-width:70px; background-color: rgb(111, 181, 205)">진행도:</p>
+                    <div class="barContainer">
+                        <div class="bar" id="proBar"></div>
+                    </div>
+                    <p id="pro"></p>
+                </div>
+                <div class="spec" id="volume">
+                    <p style="min-width:70px; background-color: rgb(111, 181, 205)">현재 타수:</p>
+                    <div class="barContainer">
+                        <div class="bar" id="volBar"></div>
+                    </div>
+                    <p id="vol"></p>
+                </div>
+                <div class="spec" id="correct">
+                    <p style="min-width:70px;background-color: rgb(111, 181, 205)">정확도:</p>
+                    <div class="barContainer">
+                        <div class="bar" id="corBar"></div>
+                    </div>
+                    <p id="cor"></p>
+                </div>
+            </div>
+            <input type="button" value="pause" id="pauseButton">
+        </aside>
+
+        <section class="typing-area">
+            <p id="info">엔터를 누르면 타자연습이 시작됩니다</p>
+            <section class="sentence-area">
+                <div class="sentenceBox">
+                    <div class="sentence" id="prev"></div>
+                    <div class="sentence" id="cur"></div>
+                    <div class="sentence" id="next">'</div>
+                </div>
+            </section>
+            <input type="text" id="inputBox" placeholder="여기에 글자가 입력 됩니다" autocomplete="off"> <!--자동완성 방지-->
+        </section>
+    </main>
+
+    <footer>@</footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>
