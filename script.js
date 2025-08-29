@@ -283,10 +283,10 @@ inputBox.addEventListener('input', function(event){//inputBox에 내용이 입�
     for(let i=0;i<targetSentence.length;i++){//사용자가 글자를 입력하면 글자의 배경색이 입혀짐
         if(i<current_userInput.length){//
             if(current_userInput[i] === targetSentence[i]){ //텍스트가 일치한다면 entenceBox의 글씨의 배경색이 회색으로 덮어짐
-                resultHTML += `<span style="background-color:gray">${targetSentence[i]}</span>`;
+                resultHTML += `<span style="background-color:rgb(131, 131, 131)">${targetSentence[i]}</span>`;
             }
             else{  //텍스트에서 일치하지 않는 부분이 생기면 글씨의 배경색이 빨간색으로 덮힘
-                resultHTML += `<span style="background-color:hsla(8, 70%, 54%, 1.00)">${targetSentence[i]}</span>`;
+                resultHTML += `<span style="background-color:#c35f30">${targetSentence[i]}</span>`;
             }
         }
         else{ //아직 사용자가 입력하지 않은 부분은 그대로

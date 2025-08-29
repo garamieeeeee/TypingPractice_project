@@ -6,7 +6,7 @@ body {
 }
 
 header, footer {
-    background-color: rgb(181, 218, 218);
+    background-color: rgb(233, 233, 233);
     padding: 1rem;
     text-align: center;
 }
@@ -25,7 +25,7 @@ main {
     flex-direction: column;
     min-width: 800px;
     gap: 1rem;
-    background-color: beige;
+    background-color: rgb(248, 240, 214);
     padding: 1rem;
 }
 
@@ -34,7 +34,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: rgb(169, 235, 213);
+    background-color: rgb(228, 207, 175);
     padding: 1rem;
 }
 
@@ -42,8 +42,8 @@ main {
     flex: 1;
     display: flex;
     gap: 1rem;
-    background-color: white;
-    border: 1px solid black;
+    background-color: rgb(242, 242, 242);
+    border: 1px solid rgb(161, 161, 161);
     padding: 1rem;
 }
 
@@ -52,49 +52,51 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center; /* 세로 중앙 */
-    background-color: #dbdbdb;
+    background-color: rgb(242, 242, 242);
     overflow: hidden; /* 넘치는 문장은 숨기기 */
     position: relative;
 }
 
 .sentence {
-    background-color: rgb(190, 190, 190);
     transition: transform 0.3s ease, opacity 0.3s ease;/* 부드럽게 이동 */
 }
 
 #prev {
     height: 30px;
     color: rgb(131, 131, 131);
+    background-color: rgb(242, 242, 242);
 }
 
 #cur {
     height: 30px;
     color: rgb(0, 0, 0);
     font-weight: bolder;
-    border: 1px solid black;
+    background-color: #c0c0c09b;
 }
 
 #next {
     height: 30px;
     color: rgb(131, 131, 131);
+    background-color: rgb(242, 242, 242);
 }
 
-#userInput {
+#inputBox {
     height: 40px;
     background-color: rgb(221, 221, 221);
+    border-radius: 10px;
+    border: 1px solid rgb(221, 221, 221);
 }
 
 #info {
     text-align: center;
-    background-color: rgb(215, 215, 190);
+    background-color: rgb(232, 232, 232);
     color: gray;
     margin: 0 auto;
     font-size: smaller;
 }
 
 #timer {
-    background-color:#a6b9e9;
-    border: 1px solid black;
+    background-color:#dddddd;
     text-align: center;
     align-content: center;
     font-size: 60px;
@@ -104,12 +106,13 @@ main {
     margin: 0 auto;
     padding: 0.5rem;
     box-sizing: border-box;
-    min-width: 150px;
+    min-width: 200px;
     font-family: "Wallpoet", sans-serif;
+    color: rgb(96, 96, 96);
 }
 
 #specBox {
-    background-color: rgb(182, 200, 220);
+    background-color: rgb(202, 182, 151);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -122,8 +125,7 @@ main {
     justify-content: space-between; /* 양 끝 정렬 */
     align-items: center;
     height: 30px;
-    background-color: aqua;
-    border: 1px solid black;
+    background-color: rgb(202, 182, 151);
     padding: 0 0.5rem;
     box-sizing: border-box;
 }
@@ -133,13 +135,13 @@ main {
     margin: 0 0.5rem;
     width: 100px;
     height: 10px;
-    background-color: rgb(199, 181, 181);
+    background-color: rgb(211, 211, 211);
     position: relative;
 }
 
 .bar {
     position: absolute;
-    background-color: #745efe;
+    background-color: #c35f30;
     height: 100%;
     width: 0%;
     transition: width 0.1s ease-out;
@@ -148,31 +150,41 @@ main {
 #pauseButton {
     width: 80%;
     height: 80px;
-    background-color: rgb(219, 202, 180);
+    background-color: rgb(226, 226, 226);
     margin: auto;
     margin-bottom: 10px;
+    font-size: larger;
+    border: 2px solid rgb(162, 162, 162);
+    border-radius: 10px;
 }
 
 #messageBox { 
     display: flex; 
     flex-direction: column; 
-    width: 80%; 
-    height: 80%;
+    width: 60%; 
+    height: 70%;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color:#ccb399;
+    background-color:rgb(188, 162, 133); 
     z-index: 999;
     border: 1px solid black;
     align-items: center;
     text-align: center;
     visibility: hidden;
+    border-radius: 10px;
+}
+
+#messageContent{
+    background-color: rgb(188, 162, 133);
+    font-size: larger;
 }
 
 #notice {
-    background-color: rgb(206, 161, 124);
+    background-color: rgb(188, 162, 133);
     text-align: center; 
+    font-size: larger;
 }
 
 #user_log {
@@ -180,11 +192,13 @@ main {
     flex: 1;
     flex-direction: column;
     justify-content: center; 
-    align-items: center;
+    align-items: left;
     width: 80%; 
     height: 40%;
-    background-color: rgb(237, 236, 141); 
+    background-color: rgb(188, 162, 133); 
     display: none;
+    font-size: larger;
+    font-weight: bolder;
 }
 
 #buttonsBox { 
@@ -192,7 +206,7 @@ main {
     width: 80%; 
     height: 20%; 
     margin-top: 10px; 
-    background-color: #b8957c; 
+    background-color: rgb(188, 162, 133); 
     align-items: center; 
     justify-content: center; 
     margin-bottom: 10px;
@@ -201,24 +215,27 @@ main {
 .threeButtons { 
     height: 60%; 
     width: 20%; 
-    background-color: #afafaf; 
-    margin: 10px; 
+    background-color: #d2d2d2; 
+    margin: 10px;
+    border: 1px solid #808080; 
+    border-radius: 10px;
+    font-size: larger;
 }
 
 #pro {
-    background-color: #b1acd4;
+    background-color: rgb(202, 182, 151);
     min-width: 40px;
     text-align: center;
 }
 
 #cor {
-    background-color: #b1acd4;
+    background-color: rgb(202, 182, 151);
     min-width: 40px;
     text-align: center;
 }
 
 #vol {
-    background-color: #b1acd4;
+    background-color: rgb(202, 182, 151);
     min-width: 40px;
     text-align: center;
 }
